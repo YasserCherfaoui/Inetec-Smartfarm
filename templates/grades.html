@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Grades</title>
+</head>
+<body>
+	<h1>Grades</h1>
+	<table style="border: 1px solid black;">
+		<thead>
+			<tr>
+				{% for category in data[0] %}
+					<td>{{ category }}</td>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for grade in data[1:] %}
+			<tr>
+				{% for data in grade %}
+				<td>{{ data }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+
+</html>
